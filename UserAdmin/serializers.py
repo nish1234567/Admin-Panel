@@ -1,5 +1,6 @@
 from dataclasses import field
 import email
+from pyexpat import model
 from unicodedata import name
 from wsgiref import validate
 from rest_framework import serializers
@@ -27,6 +28,10 @@ class UserAdminSerializer(serializers.ModelSerializer):
         user.set_password()
         user.save()
         return validated_data
+
+    class Meta:
+        model = User
+        fields = '__all__'
 
 class AdminNoteSerializer(serializers.ModelSerializer):
     class Meta:

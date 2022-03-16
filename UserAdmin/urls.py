@@ -8,10 +8,10 @@ urlpatterns = [
     path('refreshtoken',TokenRefreshView.as_view(),name='token_refresh'),
     path('verifytoken',TokenVerifyView.as_view(),name='token_verify'),
     path('adminregister/', AdminRegister.as_view()),
-    path('login',AdminLogin.as_view()),
-    path('profile',AdminProfile.as_view()),
-    path('profile/<int:pk>',AdminProfile.as_view()),
-    path('usernote',AdminUserNote.as_view()),
-    path('usernote/<int:pk>',AdminUserNote.as_view()),
+    path('adminlogin',AdminLogin.as_view()),
+    path('adminprofile',AdminProfile.as_view()),
+    path('adminprofile/<int:pk>',AdminProfile.as_view()),
+    path('adminusernote',AdminUserNote.as_view()),
+    path('adminusernote/<int:pk>',AdminUserNote.as_view()),
 
     ]
